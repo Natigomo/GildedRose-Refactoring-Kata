@@ -11,7 +11,7 @@ class GildedRose(object):
 
     def update_quality(self):
         for item in self.items:
-            if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
+            if item.name not in ("Aged Brie", "Backstage passes to a TAFKAL80ETC concert",):
                 if item.quality > 0:
                     if item.name != "Sulfuras, Hand of Ragnaros":
                         self.disminuir_calidad(item)

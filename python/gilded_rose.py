@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 
+
 class GildedRose(object):
 
     def __init__(self, items):
         self.items = items
+
+    def disminuir_calidad(self, item):
+        item.quality = item.quality - 1
 
     def update_quality(self):
         for item in self.items:
             if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
                 if item.quality > 0:
                     if item.name != "Sulfuras, Hand of Ragnaros":
-                        item.quality = item.quality - 1
+                        self.disminuir_calidad(item)
             else:
                 if item.quality < 50:
                     item.quality = item.quality + 1
@@ -28,7 +32,7 @@ class GildedRose(object):
                     if item.name != "Backstage passes to a TAFKAL80ETC concert":
                         if item.quality > 0:
                             if item.name != "Sulfuras, Hand of Ragnaros":
-                                item.quality = item.quality - 1
+                                self.disminuir_calidad(item)
                     else:
                         item.quality = item.quality - item.quality
                 else:

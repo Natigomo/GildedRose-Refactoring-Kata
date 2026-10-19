@@ -15,6 +15,9 @@ from gilded_rose import GildedRose, Item
         ("Backstage passes to a TAFKAL80ETC concert", 5, 10, 4, 13),
         ("Backstage passes to a TAFKAL80ETC concert", 0, 10, -1, 0),
         ("Sulfuras, Hand of Ragnaros", 5, 80, 5, 80),
+        ("Producto normal", 5, 0, 4, 0),
+        ("Aged Brie", 5, 50, 4, 50),
+        ("Backstage passes to a TAFKAL80ETC concert", 5, 50, 4, 50),
     ],
 )
 def test_actualizacion_productos(
